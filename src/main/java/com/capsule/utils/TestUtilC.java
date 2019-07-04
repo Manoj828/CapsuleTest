@@ -1,16 +1,22 @@
 package com.capsule.utils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.EncryptedDocumentException;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
-public class TestUtilC {
+import com.capsule.base.TestBaseC;
+
+public class TestUtilC extends TestBaseC {
 
 	public static long Page_Load_Time = 30;
 	public static long Implicity_Time = 10;
@@ -54,5 +60,16 @@ public class TestUtilC {
 		   return data;
 }
 		
+	   public  void takeScreenshotAtEndOfTest(String methodname )
+	   {
+		  File fls= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		  
+		  try {
+			FileUtils.copyFile(fls, new File("C:\\Users\\Admin\\eclipse-workspace\\CapsuleTestAutomation\\ScreenShots"+methodname+".png"));
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+	   }
 	
 }

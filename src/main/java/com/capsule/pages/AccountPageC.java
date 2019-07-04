@@ -195,7 +195,7 @@ public class AccountPageC extends TestBaseC {
 		IntegrationsLink.click();
 	 int list=driver.findElements(By.xpath("//a[contains(text(),'Configure')]")).size();
 	 System.out.println("Total Number Of Configure buttons: " +list);
-	return list;
+	 return list;
 	 
 	}
 	

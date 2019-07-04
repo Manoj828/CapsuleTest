@@ -20,6 +20,8 @@ public class AccountTestC extends TestBaseC {
 	HomePageC homepage;
 	
 	String sheetName= "AccNewUserData";
+	
+	
 	public AccountTestC() throws IOException {
 		super();
 		
@@ -36,21 +38,21 @@ public class AccountTestC extends TestBaseC {
 	}
 	
 	
-/*	@Test()
+	@Test()
 	public void AccountLinkTest() throws InterruptedException
 	{
 		Assert.assertTrue(accountpage.VerifyAccountLink());
-		System.out.println("test pass");
+	
 	} 
 	
 	@Test()
 	public void InvoiceLinkTest()
 	{
 		Assert.assertTrue(accountpage.VerifyInvoiveLink());
-		System.out.println("test pass");
+		
 	}
 	
-	@DataProvider()
+/*	@DataProvider()
 	public Object[][] GetTestData() throws IOException
 	{
 		Object data[][]=TestUtilC.GetTestData(sheetName);
@@ -72,7 +74,8 @@ public class AccountTestC extends TestBaseC {
 	public void ConfigureIconTest()
 	{
 		int total=accountpage.VerifyConfigureIcons();
-		Assert.assertEquals(total, 12);
+		//Assert.assertEquals(total, 12);
+		System.out.println(total);
 	}
 	
 	

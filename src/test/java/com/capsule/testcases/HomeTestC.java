@@ -39,19 +39,19 @@ public class HomeTestC extends TestBaseC {
 	}
 	
 	
-/*	@Test()
+	@Test()
 	public void AccountLinkTest() throws IOException
 	{
 		homepage.ClickOnAccountLink();
 		
-	}*/
+	}
 	
 	
 	
 	@AfterMethod()
 	public void tearup()
 	{
-		
+		// driver.quit();
 	}
 	
 	
